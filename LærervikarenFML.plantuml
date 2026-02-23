@@ -1,0 +1,48 @@
+
+@startuml
+
+rectangle Infrastructur #LightGreen {
+object Nøglepartnere #White {
+    Skoler
+}
+object Nøgleaktiviteter #White {
+    Rekruttering af kvalificerede medarbejdere
+    Vikarformidling
+}
+object nøgleressourcer #White{
+    Uddannet medarbejdere
+}   
+}
+
+rectangle Værditilbud #LightYellow {
+
+    object ValueProposition #White {
+Kvalificerede pålidelige vikarer
+Hurtig Respons
+Fagligt relevante vikarer
+    }
+}
+
+rectangle Kunder #f47373 {
+
+Object Kunderelationer #White {
+Personlig kontakt
+}
+object Kanaler #White {
+    Telefonisk kontakt
+}
+object Kundesegmenter #White {
+    Folkeskoler i hele landet
+}
+}
+
+rectangle Finansiel #LightBlue {
+    object Omkosningsstruktur #White {
+        Løn til medarbejdere og administration
+    }
+    object Indtægtsstrømme #White {
+        Servicegebyr fra skoler
+    }
+}
+
+@enduml
