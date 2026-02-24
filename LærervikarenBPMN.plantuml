@@ -1,0 +1,43 @@
+@startuml
+|Skole/Kunde|
+start
+:Ønsker en vikar;
+
+|Administrationssystem|
+:Søg efter kvalificerede vikarer;
+
+:Vis liste over kvalificerede vikarer;
+
+if (Vikarer fundet på listen?) then (ja)
+
+  while (Har en vikar bekræftet i telefonen?) is (nej)
+    :Vælg næste vikar på listen;
+    :Ring til vikar;
+    if (Vikar svarer og kan tage vagten?) then (ja)
+      :Bekræft accept i systemet;
+      break
+    else (nej / svarer ikke)
+      :Marker som "ikke-tilgængelig" i dag;
+      if (Er listen tom?) then (ja)
+        :Gå til afslag;
+        detach
+        else (nej)
+        :Tjek liste igen;
+      endif
+    endif 
+  endwhile (ja)
+
+  |Administrationssystem|
+  :Reserver vikar til vagten;
+  :Send bekræftelse til kunde og vikar;
+
+  |Vikar|
+  :Modtag skoleoplysninger;
+  :Mød på skolen kl. 08:15;
+  stop
+else (nej)
+|Administrationssystem|
+  :Informér kunde om manglende vikar;
+  stop
+endif
+@enduml
