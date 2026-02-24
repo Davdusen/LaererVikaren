@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor Vikar as v
+
+  actor Administration as a
+  actor Bestillingsansvarlig as b
+rectangle "System" {
+  usecase "Registrer vikar" as UC1
+  usecase "Book Vikar" as UC2
+  usecase "Oplys tilgængelighed" as UC3
+}
+
+a -- UC1
+b -- UC2
+v -- UC3
+
+@enduml
