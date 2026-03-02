@@ -1,0 +1,52 @@
+@startuml
+hide circle
+hide empty methods
+top to bottom direction
+skinparam nodesep 80
+skinparam ranksep 80
+class Vikar {
+    Navn
+    Fødselsdag
+    Adresse
+    Telefon
+    Mail
+    
+    }
+class Fag 
+{
+    Titel
+    Klassetrin
+}
+class Skole 
+{
+    Navn
+    Adresse
+    Mail
+    Telefon
+
+ } 
+ class Rådighed
+ {
+    Dato
+    Starttid
+    Sluttid
+
+ }
+class Reservation 
+{
+   Skole
+   Fag
+   Klasse
+   Dato
+   Antal vikarer
+
+
+}
+
+Vikar " 1..*" -- " 0..* " Rådighed
+Vikar " 1..*" -- "1..*" Fag
+Skole " 1" - "0..*" Reservation
+Reservation " 1..*" - "1..*" Vikar
+
+
+@enduml
