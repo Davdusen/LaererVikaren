@@ -1,0 +1,81 @@
+@startuml
+
+skinparam linetype ortho
+
+  usecase Fag1 as " 
+  Idræt
+  2-7.
+  "
+
+  usecase Fag2 as " 
+  Matematik
+  2-7.
+  "
+
+
+  usecase Råd1 as "
+  10/01/2026
+  10:00
+  16:00
+"
+
+  usecase Råd2 as "
+  10/01/2026
+ 08:00
+  16:00
+"
+  usecase Vikar1 as "
+  Liva
+  21/01/2005
+  Hejvej 21, 5200 Odense V
+  12345678
+  liva@gmail.com
+"
+
+
+  usecase Vikar2 as "
+  Darya
+  21/01/2005
+  Hejvej 21, 5200 Odense V
+  12345678
+  Darya@gmail.com
+"
+
+
+
+ usecase Res1 as "
+Rosengårdsskole
+Idræt
+4.
+12:00
+14:00
+10/01/2026
+2"
+
+
+usecase Skole1 as "
+Rosengårdsskolen
+Rosenskole@skole.dk
+23456789"
+
+
+
+Fag1 - Vikar1
+Fag2 - Vikar1
+Fag2 - Vikar2
+
+Vikar1 -- Råd1
+Vikar2 -- Råd2
+
+Råd1 - Res1
+Råd2 - Res1
+
+Res1 - Skole1
+
+
+
+
+
+
+
+@enduml
