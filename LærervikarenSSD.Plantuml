@@ -1,0 +1,18 @@
+@startuml
+
+title Book Vikar
+
+Actor Administrator as "Administrator"
+Participant System as ":System"
+
+skinparam SequenceMessageAlignment center
+
+Administrator -> System : Start booking af vikar
+Administrator <-- System : visning af tilgængelige vikarer
+Administrator -> System : Gem vikar booking i systemet
+Administrator <-- System : informationer om bookingen og gemmes i systemet
+Administrator -> System : send informationer om skolen til vikar
+Administrator <-- System : bekræftelse "Vikar booket"
+
+hide footbox
+@enduml
