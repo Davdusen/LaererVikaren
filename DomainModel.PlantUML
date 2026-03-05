@@ -38,6 +38,8 @@ class Reservation
    Fag
    Klasse
    Dato
+   startdato
+   Slutdato
    Antal vikarer
 
 
